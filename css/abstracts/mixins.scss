@@ -94,3 +94,8 @@
         @content;
     }
 }
+@mixin for-morethan-1300px {
+    @media screen and (min-width:1300px) {
+        @content;
+    }
+}

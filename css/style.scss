@@ -7,6 +7,9 @@ body{
         @include from-320px-to-768px{
             font-size: 9px;
         }
+        @include for-morethan-1300px{
+            font-size: 12px;
+        }
 }
 html{
     scroll-behavior: smooth;
@@ -24,7 +27,7 @@ html{
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            height: 487px;
+            height: 48.7em;
                 @include from-320px-to-992px{
                     width: 100%;
                 }
@@ -109,7 +112,8 @@ html{
 .about-content{
    @include flexColStart;
    @include from-320px-to-992px{
-        align-items: center;               
+        align-items: center;
+        width: 100%;               
 }
         .sub-h1{
             @include subHeading;
@@ -189,15 +193,23 @@ html{
     padding-top:5em;
     padding-bottom: 5em;
     @include flexColCenter;
+        
         .sub-h1{
             @include subHeading;
         }
         .main-h1{
             @include mainHeading;
-            @include from-320px-to-575px{
-                text-align: center;
+            @include from-320px-to-768px{
+                text-align: center !important;
             }
         }
+        .main-h2{
+            @include mainHeading;
+            @include from-320px-to-768px{
+                text-align: center !important;
+            }
+        }
+
         .process-img-wrap{
             margin-top: 5em;
         }
@@ -216,7 +228,7 @@ html{
         }
         .main-h1{
             @include mainHeading;
-            @include from-320px-to-575px{
+            @include from-320px-to-992px{
                 text-align: center;
             }
         }
@@ -318,6 +330,9 @@ html{
                 top: -20px;
                 /* left: 0; */
                 right: -40px;
+            }
+            @include for-morethan-1300px{
+                bottom: 0;
             }
                 .owl-prev{
                     &:focus{
@@ -542,6 +557,9 @@ html{
             border-top-right-radius: 5em;
             padding:4em;
             position: relative;
+                @include for-morethan-1300px{
+                    width: 100%;
+                }
                 @include from-320px-to-992px{
                     width: 100%;
                 }
@@ -559,6 +577,12 @@ html{
                     z-index: 111;
                         @include from-320px-to-992px{
                             width: 0px;
+                        }
+                        @include for-morethan-1300px{
+                            width: 26em;
+                            height: 33em;
+                            top: -60px;
+                            left: -290px;   
                         }
                 }
                 .stars-wrap{
@@ -684,7 +708,7 @@ html{
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            height: 242px;
+            height: 24.2em;
                 @include from-320px-to-992px{
                     width: 100%;
                 }
@@ -767,4 +791,9 @@ html{
         .map{
             width: 100%;
         }
+}
+#main-h-id{
+    @include from-320px-to-992px{
+        text-align: center;
+    }
 }
