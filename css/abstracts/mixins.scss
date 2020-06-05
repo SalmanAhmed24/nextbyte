@@ -1,0 +1,96 @@
+@mixin flexRowCenter {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+@mixin flexRowStart {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+@mixin flexRowSpaceBTW {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+@mixin flexColStart {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+@mixin flexColCenter {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin cusBtn {
+    color: #fff;
+            font-size:1.6em;
+            font-weight: 700;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 10;
+            transition: 0.3s ease-in-out;
+            &::before{
+                content: '';
+                background: #1488CC;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #fd739e, #e81356);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #fd739e, #e81356); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                width: 50px;
+                height: 40px;
+                position: absolute;
+                top:-10px;
+                left: -10px;
+                z-index: -1;
+                border-top-left-radius: 30px;
+                transition: 0.3s ease-in-out;
+            }
+            &:hover{
+                text-decoration: none;
+                    &::before{
+                        width: 110%;
+                    }
+            }
+}
+@mixin subHeading {
+    color:#d90044;
+            text-transform: uppercase;
+            margin-bottom: 1em;
+            font-size: 1.6em;
+            font-weight: bold;
+}
+@mixin mainHeading {
+            font-size: 3.5em;
+            text-transform: uppercase;
+            font-weight: 700;
+}
+
+// media querry mixins
+
+@mixin from-320px-to-992px {
+    @media screen and (min-width:320px) and (max-width:991.97px) {
+        @content;
+    }
+}
+@mixin from-320px-to-480px {
+    @media screen and (min-width:320px) and (max-width:479.97px) {
+        @content;
+    }
+}
+@mixin from-320px-to-768px {
+    @media screen and (min-width:320px) and (max-width:767.97px) {
+        @content;
+    }
+}
+@mixin  from-992px-to-1200px {
+    @media screen and (min-width:991.97px) and (max-width:1199.97px) {
+        @content;
+    }
+}
+@mixin  from-320px-to-575px {
+    @media screen and (min-width:320px) and (max-width:574.97px) {
+        @content;
+    }
+}
